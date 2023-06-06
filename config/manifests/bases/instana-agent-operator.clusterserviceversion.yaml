@@ -283,9 +283,9 @@ spec:
           - get
           - list
           - watch
-        serviceAccountName: controller-manager
+        serviceAccountName: instana-agent-operator
       deployments:
-      - name: controller-manager
+      - name: instana-agent-operator
         spec:
           replicas: 1
           selector:
@@ -318,7 +318,7 @@ spec:
                 ports:
                 - containerPort: 8080
                 resources: {}
-              serviceAccountName: controller-manager
+              serviceAccountName: instana-agent-operator
     strategy: deployment
   installModes:
   - supported: true
